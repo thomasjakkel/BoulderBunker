@@ -7,12 +7,21 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "eslint --quiet **/src/**/*.ts"
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint --quiet **/src/**/*.tsx",
+    "lint:fix": "eslint . --fix **/src/**/*.tsx"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
   },
   "dependencies": {
     "@types/react-native": "~0.70.6",
     "expo": "~47.0.12",
     "expo-status-bar": "~1.4.2",
+    "husky": "^8.0.3",
     "react": "18.1.0",
     "react-native": "0.70.5"
   },
@@ -22,6 +31,9 @@
     "@types/jest": "^29.4.0",
     "@types/react": "^18.0.28",
     "@types/react-test-renderer": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^5.54.0",
+    "eslint": "^8.35.0",
     "typescript": "^4.9.5"
   },
   "private": true
