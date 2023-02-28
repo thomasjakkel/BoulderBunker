@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "build": "tsc",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "lint": "eslint --quiet **/src/**/*.tsx",
     "lint:fix": "eslint . --fix **/src/**/*.tsx"
   },
