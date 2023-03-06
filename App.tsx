@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View } from 'react-native';
+import CameraScreen from './src/camera/CameraScreen';
 
 export default function App() {
   return (
@@ -8,18 +9,8 @@ export default function App() {
       <StatusBar style="auto" />
 
       <View>
-        <Button
-          title="Increase enthusiasm"
-          accessibilityLabel="increment"
-          //onPress={onIncrement}
-          color="blue"
-        />
-        <Button
-          title="Decrease enthusiasm"
-          accessibilityLabel="decrement"
-          //onPress={onDecrement}
-          color="red"
-        />
+        <Text>.......  Image  ....... </Text>
+        <CameraScreen />
       </View>
       
     </View>
@@ -32,5 +23,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffa',
     alignItems: 'center',
     justifyContent: 'center',
+    width: '100%',
   },
 });
